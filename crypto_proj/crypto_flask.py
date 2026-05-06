@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify, render_template
-from crypto_logic import find_best, coinbase, blockchain
+try:
+    from crypto_logic import find_best, coinbase, blockchain
+except ImportError:
+    from crypto_proj.crypto_logic import find_best, coinbase, blockchain
 
 app = Flask(__name__)
 
