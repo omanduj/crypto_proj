@@ -15,6 +15,7 @@ def check_coinbase_api():
     return jsonify({"coin_info_buy": optimal_coin_info})
 
 
+@app.route("/", methods=["GET"])
 @app.route("/webpage", methods=["GET"])
 def webpage():
     coinbase_coins = coinbase(coin_dict)
